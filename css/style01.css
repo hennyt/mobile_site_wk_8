@@ -1,0 +1,41 @@
+/*Root Elements and Border Box Fix*/
+html {
+height: 100;
+box-sizing: border-box;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+body{
+font-family: "segoe ui", helvetica;
+margin: 0;
+}
+#the-grid{
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(6, 1fr);
+grid-template-areas:
+"header header header header header"
+"nav main main main main"
+"nav main main main main"
+"nav main main main main"
+"nav main main main main"
+"footer footer footer footer footer";
+}
+
+/* Grid Cells */
+#header{
+background-image: url("https://www.petfinder.com/wp-content/uploads/2012/11/91615172-find-a-lump-on-cats-skin-632x475.jpg");
+grid-area: header;
+text-align: center;
+}
+#nav{
+grid-area: nav;
+}
+#main{
+grid-area: main;
+}
+#footer{
+grid-area: footer;
+text-align: center;
+}
